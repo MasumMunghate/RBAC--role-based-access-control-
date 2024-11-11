@@ -1,0 +1,16 @@
+* we have 3 user in our application Admin seller and buyer
+
+for the singup model so for that follow the step to generate model
+1) to create the model and migration file run the command line " npx sequelize-cli model:generate --name user --attributes userType:ENUM,firstName:string,lastName:string,email:string,password:string" after that it create two file a)New model was created b)New migration was created
+
+
+step to create migration
+1) npm install --save sequelize , npm install --save pg pg-hoster , npm install --save-dev sequelize-cli
+2) let init the sequelize-cli npx sequelize-cli init after install it will give us 2 folder a)config b)migration
+
+
+npx sequlize-cli model:generate --name user --atributes (atributs with type  name:string) it will generate migration as well as models files.
+
+## paranoid : true user for soft delete it means it will not actually detele it will mark as deleted it will work only our module and migration file have deletedAt:{type:Sequelize.DATE} atrribute
+
+## when we use VIRTUAL datatype in any coloumn like conformpassword : {type : Sequelize.VIRTUAL} it menas it will store only on programming side not store on database table 

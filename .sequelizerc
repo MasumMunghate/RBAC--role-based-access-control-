@@ -1,0 +1,17 @@
+// .sequelizerc
+
+const path = require('path');
+
+module.exports = {
+  config: path.resolve('config', 'config.js'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations'),
+};
+
+
+/**
+ * 1)This will tell sequelize to create models , seeder, migration folder inside the db folder.
+ * 2) npx sequelize-cli init run this command to create the db folder and insite that it will create folder accordinglly
+ * 3) Basically we do the migration process.
+ */
